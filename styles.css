@@ -8,8 +8,8 @@
 html, body {
   height: 100%;
   font-family: 'Georgia', serif;
-  background: radial-gradient(ellipse at center, #0b0c1a 0%, #000010 100%);
-  color: #f9e8d3;
+  background: radial-gradient(ellipse at center, #ccc9e7 30%, #37371f 70%);
+  color: #ff5d73;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -154,4 +154,12 @@ p {
   text-shadow: 0 0 6px #aa6600;
   margin-bottom: 3rem;
   z-index: 15;
+}
+.star {
+  position: fixed;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+  z-index: -1;
 }
