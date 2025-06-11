@@ -8,7 +8,7 @@
 html, body {
   height: 100%;
   font-family: 'Georgia', serif;
-  background: radial-gradient(ellipse at center, #ccc9e7 30%, #37371f 70%);
+  background: radial-gradient(ellipse at center, #941b0c 5%, #1e1e24 95%);
   color: #ff5d73;
   overflow-x: hidden;
   overflow-y: auto;
@@ -99,7 +99,7 @@ html, body {
 
 /* Optional form styling */
 .form-page {
-  background: radial-gradient(circle at top center, #1a001f 0%, #000010 100%);
+  background: radial-gradient(circle at top center, #941b0c 5%, #1e1e24 95%);
   color: #fff;
   text-align: center;
   padding: 2rem;
