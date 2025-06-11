@@ -142,10 +142,10 @@ h1 {
     0 0 5px #ffcc00,
     0 0 10px #ff9900,
     0 0 20px #ff6600;
+  margin-top: 2rem;  /* Add this */
   margin-bottom: 1rem;
   z-index: 15;
 }
-
 /* Paragraph */
 p {
   font-size: 1.3rem;
