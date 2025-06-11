@@ -76,43 +76,9 @@
 
   <footer>
     “The stars remember who you are.” ✨<br />
-    Made with love, sunbeams, and a little CSS magic.
+    Made with love, sunbeams, and a little magic.
   </footer>
-  <script>
-  const numStars = 8; // number of shooting stars on screen at once
-  const container = document.body;
-
-  function createShootingStar() {
-    const star = document.createElement('div');
-    star.classList.add('shooting-star');
-
-    // Randomize initial position within viewport (top: 0-30%, left: 20-90%)
-    star.style.top = `${Math.random() * 30}%`;
-    star.style.left = `${20 + Math.random() * 70}%`;
-
-    // Randomize animation delay to spread shooting stars over time
-    star.style.animationDelay = `${Math.random() * 10}s`;
-
-    // Randomize size
-    const size = 1 + Math.random() * 2; // 1 to 3px width
-    star.style.width = `${size}px`;
-    star.style.height = `${size * 30}px`;
-
-    container.appendChild(star);
-
-    // Remove star after animation finishes (assuming animation 1.5s)
-    star.addEventListener('animationend', () => {
-      star.remove();
-      // Create a new star to keep the number constant
-      createShootingStar();
-    });
-  }
-
-  // Create initial shooting stars
-  for (let i = 0; i < numStars; i++) {
-    createShootingStar();
-  }
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>
