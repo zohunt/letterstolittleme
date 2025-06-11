@@ -142,8 +142,8 @@ h1 {
     0 0 5px #ffcc00,
     0 0 10px #ff9900,
     0 0 20px #ff6600;
-  margin-bottom: 2rem;
-  z-index: 10;
+  margin-bottom: 1rem;
+  z-index: 15;
 }
 
 /* Paragraph */
@@ -152,6 +152,6 @@ p {
   max-width: 440px;
   color: #ffd;
   text-shadow: 0 0 6px #aa6600;
-  margin-bottom: 4rem;
-  z-index: 10;
+  margin-bottom: 3rem;
+  z-index: 15;
 }
