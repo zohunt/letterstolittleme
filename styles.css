@@ -133,7 +133,7 @@ h1::after {
 
 /* Twitch button styling and spacing */
 .twitch-link {
-  margin-top: 2rem;
+  margin-top: 4rem; /* or 5rem */
   font-size: 1.2rem;
   background: var(--gold);
   color: var(--deep-blue);
@@ -142,10 +142,9 @@ h1::after {
   text-decoration: none;
   box-shadow: 0 0 10px var(--gold);
   transition: background 0.3s;
-  z-index: 10;
-  position: relative;
-  top: 10px;
+  z-index: 10; /* keeps it above background stars */
 }
+
 
 .twitch-link:hover {
   background: #ffea70;
