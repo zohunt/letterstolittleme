@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letters to Little Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #FFD700;
+      --deep-blue: #0c0a23;
+      --soft-white: #fdfdfd;
+      --glass-pink: rgba(255, 182, 193, 0.3);
+      --glass-yellow: rgba(255, 255, 153, 0.3);
+      --glass-blue: rgba(173, 216, 230, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--deep-blue);
+      color: var(--soft-white);
+      height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: var(--gold);
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: translateX(-50%);
+    }
+
+    .stained-glass {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      width: 90%;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+
+    .panel {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: linear-gradient(135deg, var(--glass-pink), var(--glass-yellow), var(--glass-blue));
+      border-radius: 16px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .panel:hover {
+      transform: scale(1.05);
+    }
+
+    .twitch-link {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      background: var(--gold);
+      color: var(--deep-blue);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 10px var(--gold);
+      transition: background 0.3s;
+    }
+
+    .twitch-link:hover {
+      background: #ffea70;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1.5rem;
+      text-align: center;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Letters to Little Me</h1>
+    <p>Streaming under the stars — guided by sun goddess energy 🌞</p>
+    <a class="twitch-link" href="https://www.twitch.tv/letterstolittleme" target="_blank">Watch on Twitch</a>
+  </header>
+
+  <section class="stained-glass">
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+  </section>
+
+  <footer>
+    “The stars remember who you are.” ✨<br>
+    Made with love, sunbeams, and a little CSS magic.
+  </footer>
+</body>
+</html>
