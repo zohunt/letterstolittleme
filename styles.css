@@ -40,6 +40,7 @@ html, body {
   z-index: 1;
 }
 
+/* Twitch button */
 .twitch-button {
   display: inline-block;
   padding: 1rem 2rem;
@@ -59,6 +60,7 @@ html, body {
   user-select: none;
   z-index: 10;
   filter: drop-shadow(0 0 10px #ffcc33);
+  margin-bottom: 2rem;
 }
 
 .twitch-button:hover,
@@ -72,41 +74,6 @@ html, body {
     inset 0 0 25px #fff3b0;
   outline: none;
   transform: scale(1.05);
-}
-
-/* Sun Core */
-.sun-core {
-  fill: radial-gradient(circle at center, #fff8dc 0%, #ffcc00 70%);
-  fill: url(#sunGradient);
-  fill: #ffcc00;
-  filter: drop-shadow(0 0 12px #ffcc00);
-  animation: pulseSun 3s infinite ease-in-out;
-}
-
-/* Sun rays */
-.sun-rays line {
-  stroke: #ffd966;
-  stroke-width: 6;
-  stroke-linecap: round;
-  filter: drop-shadow(0 0 8px #ffd966);
-  animation: pulseRay 3s infinite ease-in-out;
-}
-.sun-rays line:nth-child(odd) {
-  animation-delay: 0s;
-}
-.sun-rays line:nth-child(even) {
-  animation-delay: 1.5s;
-}
-
-/* Animations */
-@keyframes pulseSun {
-  0%, 100% { filter: drop-shadow(0 0 12px #ffcc00); }
-  50% { filter: drop-shadow(0 0 25px #ffcc00); }
-}
-
-@keyframes pulseRay {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
 }
 
 /* Heading */
