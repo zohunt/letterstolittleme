@@ -133,7 +133,7 @@ h1::after {
 
 /* Twitch button styling and spacing */
 .twitch-link {
-  margin-top: 50rem;
+  margin-top: 2rem;
   font-size: 1.2rem;
   background: var(--gold);
   color: var(--deep-blue);
@@ -144,6 +144,7 @@ h1::after {
   transition: background 0.3s;
   z-index: 10;
   position: relative;
+  top: 10px;
 }
 
 .twitch-link:hover {
@@ -175,29 +176,27 @@ footer {
 }
 
 /* Shooting stars */
+.shooting-star {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: shootingStar 1.5s ease-in-out forwards;
+  transform-origin: top left;
+  border-radius: 50%;
+}
+
 @keyframes shootingStar {
   0% {
-    transform: translate(0, 0);
     opacity: 0;
+    transform: translate(0, 0) rotate(45deg);
   }
-  50% {
+  30% {
     opacity: 1;
   }
   100% {
-    transform: translate(-500px, 500px);
     opacity: 0;
+    transform: translate(-300px, 300px) rotate(45deg);
   }
 }
 
-.shooting-star {
-  position: fixed;
-  width: 2px;
-  height: 100px;
-  background: white;
-  opacity: 0;
-  animation: shootingStar 2s ease-in-out infinite;
-  z-index: 5;
-  transform: rotate(45deg);
-  /* animation-delay set inline in HTML for randomness */
-}
 
