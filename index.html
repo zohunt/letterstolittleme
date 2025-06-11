@@ -5,104 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Letters to Little Me</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Quicksand&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --gold: #FFD700;
-      --deep-blue: #0c0a23;
-      --soft-white: #fdfdfd;
-      --glass-pink: rgba(255, 182, 193, 0.3);
-      --glass-yellow: rgba(255, 255, 153, 0.3);
-      --glass-blue: rgba(173, 216, 230, 0.3);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: var(--deep-blue);
-      color: var(--soft-white);
-      height: 100vh;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-    }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 3rem;
-      color: var(--gold);
-      position: relative;
-    }
-
-    h1::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -10px;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      transform: translateX(-50%);
-    }
-
-    .stained-glass {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1rem;
-      width: 90%;
-      max-width: 900px;
-      margin: 2rem auto;
-    }
-
-    .panel {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background: linear-gradient(135deg, var(--glass-pink), var(--glass-yellow), var(--glass-blue));
-      border-radius: 16px;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .panel:hover {
-      transform: scale(1.05);
-    }
-
-    .twitch-link {
-      margin-top: 2rem;
-      font-size: 1.2rem;
-      background: var(--gold);
-      color: var(--deep-blue);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px var(--gold);
-      transition: background 0.3s;
-    }
-
-    .twitch-link:hover {
-      background: #ffea70;
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 1.5rem;
-      text-align: center;
-      font-style: italic;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -112,17 +15,26 @@
   </header>
 
   <section class="stained-glass">
-    <div class="panel"></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
-    <div class="panel"></div>
+    <div class="panel">
+  <img src="https://images.unsplash.com/photo-1584476037416-2c251d2b0bda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Floral Stained Glass Window" class="panel-icon">
+</div>
+    <div class="panel">
+  <img src="https://images.unsplash.com/photo-1517324242524-cd87de1df865?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blue Stained Glass Window" class="panel-icon">
+</div>
+    <div class="panel">
+      <img src="https://images.unsplash.com/photo-1565210579835-757793567694?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Interior of Empty Church" class="panel-icon".
+    </div>
+    <div class="panel">
+      <img src="https://images.unsplash.com/photo-1708903763127-a8330ce13620?q=80&w=1630&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A Stained Glass Window With An Anchor" class="panel-icon"
+    </div>
+    <div class="panel">
+      <img src="https://images.unsplash.com/photo-1663517951072-a60378b77811?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A Brown and Yellow Stained Glass Window" class="panel-icon"
+    </div>
   </section>
 
   <footer>
     “The stars remember who you are.” ✨<br>
-    Made with love, sunbeams, and a little CSS magic.
+    Made with love, sunbeams, and a little magic.
   </footer>
 </body>
 </html>
