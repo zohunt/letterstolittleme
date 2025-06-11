@@ -76,6 +76,14 @@ h1::after {
   transform: scale(1.05);
 }
 
+.panel-icon {
+  width: 60%;
+  height: auto;
+  margin: auto;
+  display: block;
+  margin-top: 20%;
+}
+
 .twitch-link {
   margin-top: 2rem;
   font-size: 1.2rem;
