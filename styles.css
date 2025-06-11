@@ -85,7 +85,7 @@ h1::after {
 }
 
 .twitch-link {
-  margin-top: 2rem;
+  margin-top: 4rem; /* increase this from 2rem to 4rem or more */
   font-size: 1.2rem;
   background: var(--gold);
   color: var(--deep-blue);
@@ -95,6 +95,7 @@ h1::after {
   box-shadow: 0 0 10px var(--gold);
   transition: background 0.3s;
 }
+
 
 .twitch-link:hover {
   background: #ffea70;
