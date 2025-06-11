@@ -40,22 +40,38 @@ html, body {
   z-index: 1;
 }
 
-/* Sun Goddess styling */
-.sun-goddess {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 2rem;
-  filter: drop-shadow(0 0 15px #ffd966);
+.twitch-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff3b0;
+  background: linear-gradient(135deg, #ffcc33, #ff9900);
+  border: 3px solid #ffcc33;
+  border-radius: 40px;
+  box-shadow:
+    0 0 10px #ffcc33,
+    0 0 25px #ff9900,
+    inset 0 0 15px #fff3b0;
+  text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
   z-index: 10;
-  transition: filter 0.3s ease;
-  outline: none;
+  filter: drop-shadow(0 0 10px #ffcc33);
 }
 
-.sun-goddess:hover,
-.sun-goddess:focus {
-  filter: drop-shadow(0 0 30px #ffdd55);
+.twitch-button:hover,
+.twitch-button:focus {
+  background: linear-gradient(135deg, #fff3b0, #ffb800);
+  color: #5a3b00;
+  border-color: #fff3b0;
+  box-shadow:
+    0 0 20px #fff3b0,
+    0 0 40px #ffb800,
+    inset 0 0 25px #fff3b0;
+  outline: none;
+  transform: scale(1.05);
 }
 
 /* Sun Core */
@@ -80,21 +96,6 @@ html, body {
 }
 .sun-rays line:nth-child(even) {
   animation-delay: 1.5s;
-}
-
-/* Face */
-.face {
-  fill: #fff2b8;
-  filter: drop-shadow(0 0 5px #ffcc00);
-}
-.eye {
-  fill: #6a4f00;
-}
-.smile {
-  fill: none;
-  stroke: #6a4f00;
-  stroke-width: 3;
-  stroke-linecap: round;
 }
 
 /* Animations */
