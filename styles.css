@@ -73,7 +73,7 @@ body {
 
 /* Text Styling */
 .container h1 {
-  color: #fffefc;
+  color: #fac748;
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
@@ -86,56 +86,3 @@ body {
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Buttons */
-.twitch-button,
-.reading-button {
-  margin: 1rem auto;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.twitch-button:hover,
-.reading-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-  transform: scale(1.05);
-}
-
-/* Buttons */
-.twitch-button,
-.reading-button {
-  margin: 1rem auto;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.twitch-button:hover,
-.reading-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-  transform: scale(1.05);
-}
