@@ -50,6 +50,7 @@ body {
 /* Container Shared Styles */
 /* Container Shared Styles */
 .container {
+  margin-top: 3rem;
   margin: 2rem auto;
   max-width: 500px;
   width: 90%;
