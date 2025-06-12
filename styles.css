@@ -1,170 +1,55 @@
-/* Reset */
-* {
+/* Global Styles */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Georgia', serif;
-  background: radial-gradient(ellipse at center, #0b0c1a 0%, #000010 100%);
-  color: #f9e8d3;
-  overflow-x: hidden;
-  overflow-y: auto;
+  background: #000;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Stars container fills viewport, behind content */
-#stars-container {
+#stars-container,
+#constellation-canvas {
   position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
-/* Canvas for constellation lines */
-#constellation-canvas {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Twitch button */
-.twitch-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #fff3b0;
-  background: linear-gradient(135deg, #ffcc33, #ff9900);
-  border: 3px solid #ffcc33;
-  border-radius: 40px;
-  box-shadow:
-    0 0 10px #ffcc33,
-    0 0 25px #ff9900,
-    inset 0 0 15px #fff3b0;
+/* Buttons */
+.twitch-button,
+.reading-button {
+  margin: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
-  cursor: pointer;
+  border: 2px solid #fff5cc;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(145deg, #6a0dad, #ff1493);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
   transition: all 0.3s ease;
-  user-select: none;
-  z-index: 10;
-  filter: drop-shadow(0 0 10px #ffcc33);
-  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .twitch-button:hover,
-.twitch-button:focus {
-  background: linear-gradient(135deg, #fff3b0, #ffb800);
-  color: #5a3b00;
-  border-color: #fff3b0;
-  box-shadow:
-    0 0 20px #fff3b0,
-    0 0 40px #ffb800,
-    inset 0 0 25px #fff3b0;
-  outline: none;
-  transform: scale(1.05);
-}
-.reading-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #d173ff, #9c42f5);
-  border: 2px solid #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  box-shadow: 0 0 15px #9c42f5;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
 .reading-button:hover {
-  background: linear-gradient(135deg, #e0b3ff, #b266ff);
-  box-shadow: 0 0 25px #b266ff;
-  color: #000;
+  background: linear-gradient(145deg, #ff1493, #6a0dad);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+  transform: scale(1.03);
 }
 
-/* Optional form styling */
-.form-page {
-  background: radial-gradient(circle at top center, #1a001f 0%, #000010 100%);
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
-}
-
-.reading-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 2rem auto;
-}
-
-.reading-form input,
-.reading-form textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 100%;
-}
-
-.reading-form button {
-  padding: 1rem;
-  background: #9c42f5;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.reading-form button:hover {
-  background: #b266ff;
-}
-
-/* Heading */
-h1 {
-  font-size: 3rem;
-  text-shadow:
-    0 0 5px #ffcc00,
-    0 0 10px #ff9900,
-    0 0 20px #ff6600;
-  margin-top: 2rem;  /* Add this */
-  margin-bottom: 1rem;
-  z-index: 15;
-}
-/* Paragraph */
-p {
-  font-size: 1.3rem;
-  max-width: 440px;
-  color: #ffd;
-  text-shadow: 0 0 6px #aa6600;
-  margin-bottom: 3rem;
-  z-index: 15;
-}
-.star {
-  position: fixed;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.8;
-  animation: twinkle 2s infinite alternate;
-  z-index: -1;
-}
+/* Container Shared Styles */
 .container {
-   margin: 2rem auto;
+  margin: 2rem auto;
   max-width: 500px;
   width: 90%;
   min-height: 70vh;
@@ -177,18 +62,66 @@ p {
   z-index: 2;
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  background-image: 
-    linear-gradient(45deg, rgba(255,223,0,0.08) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(255,182,193,0.08) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(135,206,250,0.08) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(144,238,144,0.08) 75%);
-  background-size: 60px 60px;
-  z-index: 2;
 }
 
+/* Cathedral Style */
+.cathedral {
+  background: rgba(0, 0, 0, 0.3);
+  border: 3px solid #fff5cc;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 100, 0, 0.2);
+  background-image:
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(255, 0, 0, 0.25) 0deg 45deg,
+      rgba(0, 255, 0, 0.25) 45deg 90deg,
+      rgba(0, 0, 255, 0.25) 90deg 135deg,
+      rgba(255, 255, 0, 0.25) 135deg 180deg,
+      rgba(255, 0, 255, 0.25) 180deg 225deg,
+      rgba(0, 255, 255, 0.25) 225deg 270deg,
+      rgba(255, 128, 0, 0.25) 270deg 315deg,
+      rgba(128, 0, 255, 0.25) 315deg 360deg
+    );
+  background-size: 100px 100px;
+}
+
+/* Text Inside Cathedral */
+.cathedral h1 {
+  color: #fff5cc;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cathedral h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0.5rem auto 0;
+  height: 3px;
+  background: linear-gradient(to right, #ffcc00, #ff66cc, #6a0dad);
+  border-radius: 999px;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+.cathedral p {
+  color: #f9f6f2;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional Toggle Button */
+#toggleStyle {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: #222;
+  color: #fff5cc;
+  border: 2px solid #fff5cc;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 5;
+}
