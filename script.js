@@ -136,12 +136,3 @@ function parallaxStars() {
 }
 parallaxStars();
 
-// ==== Toggle Style Button ====
-
-const toggleBtn = document.getElementById('toggleStyle');
-const glassContainer = document.getElementById('glassContainer');
-
-toggleBtn.addEventListener('click', () => {
-  glassContainer.classList.toggle('cathedral');
-  glassContainer.classList.toggle('ethereal');
-});
