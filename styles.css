@@ -62,108 +62,52 @@ body {
   z-index: 2;
   position: relative;
   overflow: hidden;
+
+  /* Translucent effect */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
-/* Cathedral Style */
-.cathedral {
-  background: rgba(0, 0, 0, 0.3);
-  border: 3px solid #fff5cc;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 40px rgba(255, 215, 0, 0.5), 0 0 80px rgba(255, 100, 0, 0.2);
-  background-image:
-    repeating-conic-gradient(
-      from 0deg,
-      rgba(255, 0, 0, 0.25) 0deg 45deg,
-      rgba(0, 255, 0, 0.25) 45deg 90deg,
-      rgba(0, 0, 255, 0.25) 90deg 135deg,
-      rgba(255, 255, 0, 0.25) 135deg 180deg,
-      rgba(255, 0, 255, 0.25) 180deg 225deg,
-      rgba(0, 255, 255, 0.25) 225deg 270deg,
-      rgba(255, 128, 0, 0.25) 270deg 315deg,
-      rgba(128, 0, 255, 0.25) 315deg 360deg
-    );
-  background-size: 100px 100px;
-}
-
-/* Text Inside Cathedral */
-.cathedral h1 {
-  color: #fff5cc;
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+/* Text Styling */
+.container h1 {
+  color: #fffefc;
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  position: relative;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
-.cathedral h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  margin: 0.5rem auto 0;
-  height: 3px;
-  background: linear-gradient(to right, #ffcc00, #ff66cc, #6a0dad);
-  border-radius: 999px;
-  box-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
-}
-
-.cathedral p {
-  color: #f9f6f2;
+.container p {
+  color: #f0e9e7;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional Toggle Button */
-#toggleStyle {
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  background: #222;
-  color: #fff5cc;
-  border: 2px solid #fff5cc;
-  border-radius: 8px;
+/* Buttons */
+.twitch-button,
+.reading-button {
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
   cursor: pointer;
-  z-index: 5;
-}
-.ethereal {
-  background: rgba(230, 230, 255, 0.3);
-  border: 2px solid rgba(180, 180, 255, 0.7);
-  border-radius: 20px;
-  backdrop-filter: blur(25px);
-  box-shadow: 0 0 40px 10px rgba(150, 150, 255, 0.5);
-  background-image:
-    repeating-conic-gradient(
-      from 45deg,
-      rgba(180, 180, 255, 0.2) 0deg 30deg,
-      rgba(200, 200, 255, 0.2) 30deg 60deg
-    );
-  background-size: 80px 80px;
-  transition: all 0.4s ease-in-out;
 }
 
-/* Text Inside Ethereal */
-.ethereal h1 {
-  color: #ccd9ff;
-  text-shadow: 0 0 8px rgba(204, 217, 255, 0.6);
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.ethereal h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  margin: 0.5rem auto 0;
-  height: 3px;
-  background: linear-gradient(to right, #aabfff, #8888ff, #6655ff);
-  border-radius: 999px;
-  box-shadow: 0 0 6px rgba(170, 170, 255, 0.7);
-}
-
-.ethereal p {
-  color: #e0e6ff;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-shadow: 0 0 4px rgba(40, 40, 80, 0.5);
+.twitch-button:hover,
+.reading-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
 }
