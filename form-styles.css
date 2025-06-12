@@ -28,7 +28,7 @@ body, html {
   width: 90vw;
   color: #fff5cc;
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   background-image:
     repeating-conic-gradient(
       from 0deg,
