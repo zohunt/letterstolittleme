@@ -50,7 +50,7 @@ body {
 /* Container Shared Styles */
 /* Container Shared Styles */
 .container {
-  margin-top: 3rem;
+  margin-top: 6rem;
   margin: 2rem auto;
   max-width: 500px;
   width: 90%;
@@ -68,7 +68,7 @@ body {
   /* Translucent effect */
   background: rgba(255, 255, 255, 0.15);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(2px);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
