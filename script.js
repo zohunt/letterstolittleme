@@ -137,3 +137,10 @@ function parallaxStars() {
   requestAnimationFrame(parallaxStars);
 }
 parallaxStars();
+const container = document.querySelector('.container');
+const toggleBtn = document.getElementById('toggleStyle');
+
+toggleBtn.addEventListener('click', () => {
+  container.classList.toggle('ethereal');
+  container.classList.toggle('cathedral');
+});
