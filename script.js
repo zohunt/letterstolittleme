@@ -35,7 +35,6 @@ styleSheet.textContent = `
 `;
 document.head.appendChild(styleSheet);
 
-
 // ==== Constellation lines on Canvas ====
 
 const canvas = document.getElementById('constellation-canvas');
@@ -115,7 +114,6 @@ function animate() {
 }
 animate();
 
-
 // ==== Parallax effect on stars ====
 
 let mouseX = window.innerWidth / 2;
@@ -138,3 +136,12 @@ function parallaxStars() {
 }
 parallaxStars();
 
+// ==== Toggle Style Button ====
+
+const toggleBtn = document.getElementById('toggleStyle');
+const glassContainer = document.getElementById('glassContainer');
+
+toggleBtn.addEventListener('click', () => {
+  glassContainer.classList.toggle('cathedral');
+  glassContainer.classList.toggle('ethereal');
+});
