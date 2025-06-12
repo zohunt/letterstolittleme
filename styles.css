@@ -125,3 +125,45 @@ body {
   cursor: pointer;
   z-index: 5;
 }
+.ethereal {
+  background: rgba(230, 230, 255, 0.3);
+  border: 2px solid rgba(180, 180, 255, 0.7);
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 40px 10px rgba(150, 150, 255, 0.5);
+  background-image:
+    repeating-conic-gradient(
+      from 45deg,
+      rgba(180, 180, 255, 0.2) 0deg 30deg,
+      rgba(200, 200, 255, 0.2) 30deg 60deg
+    );
+  background-size: 80px 80px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Text Inside Ethereal */
+.ethereal h1 {
+  color: #ccd9ff;
+  text-shadow: 0 0 8px rgba(204, 217, 255, 0.6);
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ethereal h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0.5rem auto 0;
+  height: 3px;
+  background: linear-gradient(to right, #aabfff, #8888ff, #6655ff);
+  border-radius: 999px;
+  box-shadow: 0 0 6px rgba(170, 170, 255, 0.7);
+}
+
+.ethereal p {
+  color: #e0e6ff;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 0 0 4px rgba(40, 40, 80, 0.5);
+}
