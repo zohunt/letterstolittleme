@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Private Reading Request</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Reading</title>
+  <link rel="stylesheet" href="form-styles.css" />
 </head>
-<body class="form-page">
-  <h1>Request a Private Reading</h1>
-  <form class="reading-form" action="https://formspree.io/f/mdkzgazn" method="POST">
-    <label>
-      Your Name:
-      <input type="text" name="name" required />
-    </label>
-    <label>
-      Your Email:
-      <input type="email" name="email" required />
-    </label>
-    <label>
-      Your Question or Message:
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-    <button type="submit">Submit Request</button>
-  </form>
+<body>
+  <div id="stars-container"></div>
+  <canvas id="constellation-canvas"></canvas>
+
+  <div class="form-container cathedral">
+    <h1>Private Reading Request</h1>
+    <p>Step into the sacred glow and let the stars whisper your truth.</p>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">What would you like guidance on?</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send to the Stars</button>
+    </form>
+  </div>
+
+  <script src="background.js"></script>
 </body>
 </html>
