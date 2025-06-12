@@ -48,6 +48,7 @@ body {
 }
 
 /* Container Shared Styles */
+/* Container Shared Styles */
 .container {
   margin: 2rem auto;
   max-width: 500px;
@@ -59,29 +60,57 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   z-index: 2;
+  position: relative;
   overflow: hidden;
 
-  background: rgba(255, 255, 255, 0.1); /* very transparent white */
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  /* Translucent effect */
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
+/* Text Styling */
 .container h1 {
-  color: #fff; /* pure white */
+  color: #fffefc;
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); /* dark shadow for contrast */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
 }
 
 .container p {
   color: #f0e9e7;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.twitch-button,
+.reading-button {
+  margin: 1rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.twitch-button:hover,
+.reading-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
 }
 
 /* Buttons */
