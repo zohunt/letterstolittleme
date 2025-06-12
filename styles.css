@@ -33,7 +33,7 @@ body {
   border: 2px solid #fff5cc;
   border-radius: 12px;
   color: #fff;
-  background: linear-gradient(145deg, #6a0dad, #ff1493);
+  background: linear-gradient(145deg, #ca7df9, #473198);
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
   transition: all 0.3s ease;
   position: relative;
@@ -42,7 +42,7 @@ body {
 
 .twitch-button:hover,
 .reading-button:hover {
-  background: linear-gradient(145deg, #ff1493, #6a0dad);
+  background: linear-gradient(145deg, #473198, #ca7df9);
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
   transform: scale(1.03);
 }
