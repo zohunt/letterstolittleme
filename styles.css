@@ -59,30 +59,29 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 2;
   position: relative;
+  z-index: 2;
   overflow: hidden;
 
-  /* Translucent effect */
-  background: rgba(255, 255, 255, 0.15);
-  border: 1.5px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1); /* very transparent white */
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
 
-/* Text Styling */
 .container h1 {
-  color: #fffefc;
+  color: #fff; /* pure white */
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7); /* dark shadow for contrast */
 }
 
 .container p {
   color: #f0e9e7;
   font-size: 1.2rem;
   line-height: 1.6;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Buttons */
